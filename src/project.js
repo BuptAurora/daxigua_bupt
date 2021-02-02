@@ -1152,10 +1152,21 @@ window.__require = function e(t, n, o) {
                         e < n && (e = n)
                     }
                     return e
-                }, t.prototype.createOneFruit = function(e) {
+                },
+                    //生成水果
+                    t.prototype.createOneFruit = function(e) {
                     var t = this,
                         n = cc.instantiate(this.fruitPre);
-                    n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.getComponent("fruitData").fruitNumber = e, n.position = this.lineNode.children[1].position, n.scale = 0, n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static, n.getComponent(cc.PhysicsCircleCollider).radius = 0, n.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(n).to(.5, {
+                    n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e],
+                        n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e],
+                        n.getComponent("fruitData").fruitNumber = e,
+                        n.position = this.lineNode.children[1].position,
+                        n.scale = 0,
+                        n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static,
+                        n.getComponent(cc.PhysicsCircleCollider).radius = 0,
+                        n.getComponent(cc.PhysicsCircleCollider).reduction = 0.2,
+                        n.getComponent(cc.PhysicsCircleCollider).apply(),
+                        cc.tween(n).to(.5, {
                         scale: 1
                     }, {
                         easing: "backOut"
