@@ -34,11 +34,8 @@
 
 找到\res\raw-assets\下各种水果的路径，替换水果图片，但对图片要求较高
 
-右上角图片\res\raw-assets\8c\
 
-\res\raw-assets\47\
+# 怎么修改水果参数
 
-切换两张图片到达字放大缩小
-
-
+找到src/project.js, ctrl+f 查找“生成水果”
 
