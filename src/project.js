@@ -1164,7 +1164,7 @@ window.__require = function e(t, n, o) {
                         n.scale = 0,
                         n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static,
                         n.getComponent(cc.PhysicsCircleCollider).radius = 0,
-                        n.getComponent(cc.PhysicsCircleCollider).reduction = 0.2,
+                        n.getComponent(cc.PhysicsCircleCollider).restitution = 0.9,
                         n.getComponent(cc.PhysicsCircleCollider).apply(),
                         cc.tween(n).to(.5, {
                         scale: 1
